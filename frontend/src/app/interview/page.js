@@ -227,7 +227,13 @@ function InterviewScreen() {
 
 
   if (!question) {
-    return <div className="flex items-center justify-center min-h-screen text-gray-400">Loading interview...</div>;
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen text-gray-400 px-4 text-center gap-2">
+        <div className="w-8 h-8 border-2 border-gray-700 border-t-indigo-500 rounded-full animate-spin mb-2"></div>
+        <p>Starting your interview...</p>
+        <p className="text-xs text-gray-600">This can take up to a minute on the first request.</p>
+      </div>
+    );
   }
 
   return (
